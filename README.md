@@ -1,2 +1,2 @@
-# dotfiles
-This repository contains all of the dotfiles for my Arch Linux installation.
+# initial-setup
+This branch contains all of the dotfiles after the initial setup for my Arch Linux installation.
