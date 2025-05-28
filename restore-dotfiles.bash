@@ -55,11 +55,11 @@ cp -r "$RESTORE_SOURCE"/fastfetch "$RESTORE_DESTINATION"
 # Hypr Ecosystem
 cp -r "$RESTORE_SOURCE"/hypr "$RESTORE_DESTINATION"
 
-# Waybar
-cp -r "$RESTORE_SOURCE"/waybar "$RESTORE_DESTINATION"
-
 # Kitty
 cp -r "$RESTORE_SOURCE"/kitty "$RESTORE_DESTINATION"
+
+# Waybar
+cp -r "$RESTORE_SOURCE"/waybar "$RESTORE_DESTINATION"
 
 # Wofi
 cp -r "$RESTORE_SOURCE"/wofi "$RESTORE_DESTINATION"
