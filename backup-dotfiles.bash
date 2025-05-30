@@ -58,6 +58,9 @@ cp -r "$BACKUP_SOURCE"/hypr "$BACKUP_DESTINATION"
 # Kitty
 cp -r "$BACKUP_SOURCE"/kitty "$BACKUP_DESTINATION"
 
+# UWSM
+cp -r "$BACKUP_SOURCE"/uwsm "$BACKUP_DESTINATION"
+
 # Waybar
 cp -r "$BACKUP_SOURCE"/waybar "$BACKUP_DESTINATION"
 
