@@ -45,6 +45,10 @@ fi
 # Make the destination directory if it doesn't exist
 mkdir -p "$RESTORE_DESTINATION"
 
+# Restore .bash* dotfiles
+cp "$RESTORE_SOURCE"/.bash_profile "$RESTORE_DESTINATION"
+cp "$RESTORE_SOURCE"/.bashrc "$RESTORE_DESTINATION"
+
 # Restore .config dotfiles
 # Source
 CONFIG_SOURCE="$RESTORE_SOURCE"/.config
