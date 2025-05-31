@@ -77,3 +77,14 @@ cp -r "$CONFIG_SOURCE"/waybar "$CONFIG_DESTINATION"
 
 # Wofi
 cp -r "$CONFIG_SOURCE"/wofi "$CONFIG_DESTINATION"
+
+# Backup .ssh dotfiles
+# Source
+SSH_SOURCE="$BACKUP_SOURCE"/.ssh
+
+# Destination
+mkdir -p "$BACKUP_DESTINATION"/.ssh
+SSH_DESTINATION="$BACKUP_DESTINATION"/.ssh
+
+# Config
+cp "$SSH_SOURCE"/config "$SSH_DESTINATION"

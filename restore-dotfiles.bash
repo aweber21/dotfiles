@@ -77,3 +77,14 @@ cp -r "$CONFIG_SOURCE"/waybar "$CONFIG_DESTINATION"
 
 # Wofi
 cp -r "$CONFIG_SOURCE"/wofi "$CONFIG_DESTINATION"
+
+# Restore .ssh dotfiles
+# Source
+SSH_SOURCE="$RESTORE_SOURCE"/.ssh
+
+# Destination
+mkdir -p "$RESTORE_DESTINATION"/.ssh
+SSH_DESTINATION="$RESTORE_DESTINATION"/.ssh
+
+# Config
+cp "$SSH_SOURCE"/config "$SSH_DESTINATION"
