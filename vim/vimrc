@@ -1,0 +1,43 @@
+" 
+" Vim Default vimrc file
+" Should be located in ~/.config/vim
+"
+
+" 
+" Vim Configuration
+" 
+" Move .viminfo default location
+set viminfo+=n~/.config/vim/viminfo
+
+" Additional unsaved buffers 
+set hidden
+
+" Command-line completion
+set wildmenu
+
+" Incremental search when typing search item
+set incsearch
+
+" 'matchit.vim' allows jumping from 'if' to 'else' using '%'
+runtime macros/matchit.vim
+
+" 
+" Vim Environment
+" 
+" Line numbers
+set ruler
+set number
+
+" Indentation
+set tabstop=4
+set autoindent
+
+" Text wrapping
+set textwidth=80
+
+" Intuitive backspace behavior
+set backspace=indent,eol,start
+
+" Filetype and syntax highlighting
+filetype plugin indent on
+syntax on
