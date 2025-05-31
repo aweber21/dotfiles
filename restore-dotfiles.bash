@@ -4,8 +4,8 @@
 # Handle Arguments
 # Help
 if [[ "$#" -eq 1 ]] && [[ "$1" = "-h" ]]; then
-	echo "0 Arguments - source: script location, destination: ~/.config"
-	echo "1 Argument  - source: argument, destination: ~/.config"
+	echo "0 Arguments - source: script location, destination: ~"
+	echo "1 Argument  - source: argument, destination: ~"
 	echo "2 Arguments - source: first argument, destination: second argument"
 	echo "Usage: bash $0 [source] [destination]"
 	exit
@@ -30,14 +30,14 @@ elif [[ "$#" -eq 2 ]]; then
 fi
 
 # Restore Destination
-# 0 Arguments - defaults to ~/.config
-# 1 Argument  - defaults to ~/.config
+# 0 Arguments - defaults to ~
+# 1 Argument  - defaults to ~
 # 2 Arguments - sets to value of second argument
 # Otherwise   - exit
 if [[ "$#" -eq 0 ]]; then
-	RESTORE_DESTINATION=~/.config
+	RESTORE_DESTINATION=~
 elif [[ "$#" -eq 1 ]]; then
-	RESTORE_DESTINATION=~/.config
+	RESTORE_DESTINATION=~
 elif [[ "$#" -eq 2 ]]; then
 	RESTORE_DESTINATION="$2"
 fi
@@ -45,28 +45,35 @@ fi
 # Make the destination directory if it doesn't exist
 mkdir -p "$RESTORE_DESTINATION"
 
-# Backup dotfiles
+# Restore .config dotfiles
+# Source
+CONFIG_SOURCE="$RESTORE_SOURCE"/.config
+
+# Destination
+mkdir -p "$RESTORE_DESTINATION"/.config
+CONFIG_DESTINATION="$RESTORE_DESTINATION"/.config
+
 # Backgrounds
-cp -r "$RESTORE_SOURCE"/backgrounds "$RESTORE_DESTINATION"
+cp -r "$CONFIG_SOURCE"/backgrounds "$CONFIG_DESTINATION"
 
 # Fastfetch
-cp -r "$RESTORE_SOURCE"/fastfetch "$RESTORE_DESTINATION"
+cp -r "$CONFIG_SOURCE"/fastfetch "$CONFIG_DESTINATION"
 
 # Hypr Ecosystem
-cp -r "$RESTORE_SOURCE"/hypr "$RESTORE_DESTINATION"
+cp -r "$CONFIG_SOURCE"/hypr "$CONFIG_DESTINATION"
 
 # Kitty
-cp -r "$RESTORE_SOURCE"/kitty "$RESTORE_DESTINATION"
+cp -r "$CONFIG_SOURCE"/kitty "$CONFIG_DESTINATION"
 
 # UWSM
-cp -r "$RESTORE_SOURCE"/uwsm "$RESTORE_DESTINATION"
+cp -r "$CONFIG_SOURCE"/uwsm "$CONFIG_DESTINATION"
 
 # Vim
-mkdir "$RESTORE_DESTINATION"/vim
-cp -r "$RESTORE_SOURCE"/vim/vimrc "$RESTORE_DESTINATION"/vim
+mkdir "$CONFIG_DESTINATION"/vim
+cp -r "$CONFIG_SOURCE"/vim/vimrc "$CONFIG_DESTINATION"/vim
 
 # Waybar
-cp -r "$RESTORE_SOURCE"/waybar "$RESTORE_DESTINATION"
+cp -r "$CONFIG_SOURCE"/waybar "$CONFIG_DESTINATION"
 
 # Wofi
-cp -r "$RESTORE_SOURCE"/wofi "$RESTORE_DESTINATION"
+cp -r "$CONFIG_SOURCE"/wofi "$CONFIG_DESTINATION"
