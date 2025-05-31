@@ -61,6 +61,10 @@ cp -r "$BACKUP_SOURCE"/kitty "$BACKUP_DESTINATION"
 # UWSM
 cp -r "$BACKUP_SOURCE"/uwsm "$BACKUP_DESTINATION"
 
+# Vim
+mkdir -p "$BACKUP_DESTINATION"/vim
+cp -r "$BACKUP_SOURCE"/vim/vimrc "$BACKUP_DESTINATION"/vim
+
 # Waybar
 cp -r "$BACKUP_SOURCE"/waybar "$BACKUP_DESTINATION"
 
