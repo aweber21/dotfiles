@@ -1,0 +1,10 @@
+" 
+" Vim Default vimrc file
+" Should be located in ~/.config/vim
+"
+
+" 
+" Vim Configuration
+" 
+" Move .viminfo default location
+set viminfo+=n~/.config/vim/viminfo
