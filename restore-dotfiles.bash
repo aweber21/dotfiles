@@ -70,7 +70,7 @@ cp -r "$CONFIG_SOURCE"/uwsm "$CONFIG_DESTINATION"
 
 # Vim
 mkdir "$CONFIG_DESTINATION"/vim
-cp -r "$CONFIG_SOURCE"/vim/vimrc "$CONFIG_DESTINATION"/vim
+cp "$CONFIG_SOURCE"/vim/vimrc "$CONFIG_DESTINATION"/vim
 
 # Waybar
 cp -r "$CONFIG_SOURCE"/waybar "$CONFIG_DESTINATION"
