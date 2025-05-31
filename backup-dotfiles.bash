@@ -45,6 +45,10 @@ fi
 # Make the destination directory if it doesn't exist
 mkdir -p "$BACKUP_DESTINATION"
 
+# Backup .bash* dotfiles
+cp "$BACKUP_SOURCE"/.bash_profile "$BACKUP_DESTINATION"
+cp "$BACKUP_SOURCE"/.bashrc "$BACKUP_DESTINATION"
+
 # Backup .config dotfiles
 # Source
 CONFIG_SOURCE="$BACKUP_SOURCE"/.config
