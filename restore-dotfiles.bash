@@ -57,41 +57,5 @@ CONFIG_SOURCE="$RESTORE_SOURCE"/.config
 mkdir -p "$RESTORE_DESTINATION"/.config
 CONFIG_DESTINATION="$RESTORE_DESTINATION"/.config
 
-# Backgrounds
-cp -r "$CONFIG_SOURCE"/backgrounds "$CONFIG_DESTINATION"
-
-# Fastfetch
-cp -r "$CONFIG_SOURCE"/fastfetch "$CONFIG_DESTINATION"
-
-# Hypr Ecosystem
-cp -r "$CONFIG_SOURCE"/hypr "$CONFIG_DESTINATION"
-
-# Kitty
-cp -r "$CONFIG_SOURCE"/kitty "$CONFIG_DESTINATION"
-
 # Neovim
 cp -r "$CONFIG_SOURCE"/nvim "$CONFIG_DESTINATION"
-
-# UWSM
-cp -r "$CONFIG_SOURCE"/uwsm "$CONFIG_DESTINATION"
-
-# Vim
-mkdir "$CONFIG_DESTINATION"/vim
-cp "$CONFIG_SOURCE"/vim/vimrc "$CONFIG_DESTINATION"/vim
-
-# Waybar
-cp -r "$CONFIG_SOURCE"/waybar "$CONFIG_DESTINATION"
-
-# Wofi
-cp -r "$CONFIG_SOURCE"/wofi "$CONFIG_DESTINATION"
-
-# Restore .ssh dotfiles
-# Source
-SSH_SOURCE="$RESTORE_SOURCE"/.ssh
-
-# Destination
-mkdir -p "$RESTORE_DESTINATION"/.ssh
-SSH_DESTINATION="$RESTORE_DESTINATION"/.ssh
-
-# Config
-cp "$SSH_SOURCE"/config "$SSH_DESTINATION"
