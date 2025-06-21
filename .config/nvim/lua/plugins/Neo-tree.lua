@@ -1,29 +1,34 @@
 --[[
 Neo-tree
-    > pack/plugins/start/neo-tree.nvim
-
-Dependencies:
-Plenary (plenary.nvim)
-    > pack/plugins/start/plenary.nvim
-Web-Devicons
-    > pack/plugins/start/web-devicons
-Nui (nui.nvim)
-    > pack/plugins/start/nui.nvim
+    - Adds a file browser to Neovim
 --]]
 
--- Modules
-local neotree = require("neo-tree")
-
--- Setup
-neotree.setup({
-	filesystem = {
-		filtered_items = {
-			visible = true,
-		},
+return {
+	"nvim-neo-tree/neo-tree.nvim",
+	branch = "v3.x",
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+		"nvim-tree/nvim-web-devicons",
+		"MunifTanjim/nui.nvim",
+		-- {"3rd/image.nvim", opts = {}}, -- optional image support in preview
+		-- window: See '# Preview Mode'
 	},
-})
+	config = function()
+		-- Modules
+		local neotree = require("neo-tree")
 
--- Keymaps
-vim.keymap.set("n", "<Leader>t", function()
-	vim.cmd(":Neotree filesystem toggle left")
-end, {})
+		-- Setup
+		neotree.setup({
+			filesystem = {
+				filtered_items = {
+					visible = true,
+				},
+			},
+		})
+
+		-- Keymaps
+		vim.keymap.set("n", "<Leader>t", function()
+			vim.cmd(":Neotree filesystem toggle left")
+		end, {})
+	end,
+}

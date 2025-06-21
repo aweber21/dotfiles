@@ -1,7 +1,7 @@
 --[[
-Colorschemes
+Init.lua
+    - Main file for Neovim configuration
 --]]
-require("colorschemes")
 
 --[[
 Source Vim Settings
@@ -15,9 +15,9 @@ vim.cmd([[
 --[[
 Keybinds
 --]]
-require("keybinds")
+require("config/keybinds")
 
 --[[
-Plugins
+Lazy
 --]]
-require("plugins")
+require("config/lazy")
