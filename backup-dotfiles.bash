@@ -69,6 +69,15 @@ cp -r "$CONFIG_SOURCE"/hypr "$CONFIG_DESTINATION"
 # Kitty
 cp -r "$CONFIG_SOURCE"/kitty "$CONFIG_DESTINATION"
 
+# Neovim
+cp -r "$CONFIG_SOURCE"/nvim "$CONFIG_DESTINATION"
+ls "$CONFIG_DESTINATION"/nvim/pack/colorschemes/start > colorschemes.txt
+rm -rf "$CONFIG_DESTINATION"/nvim/pack/colorschemes/start/*
+mv colorschemes.txt "$CONFIG_DESTINATION"/nvim/pack/colorschemes/start
+ls "$CONFIG_DESTINATION"/nvim/pack/plugins/start > plugins.txt
+rm -rf "$CONFIG_DESTINATION"/nvim/pack/plugins/start/*
+mv plugins.txt "$CONFIG_DESTINATION"/nvim/pack/plugins/start
+
 # UWSM
 cp -r "$CONFIG_SOURCE"/uwsm "$CONFIG_DESTINATION"
 

@@ -6,10 +6,12 @@
 " 
 " Vim Configuration
 " 
-" Move .viminfo default location
-set viminfo+=n~/.config/vim/viminfo
+" Move .viminfo default location if Neovim is not being used
+if !has('nvim')
+	set viminfo+=n~/.config/vim/viminfo
+endif
 
-" Additional unsaved buffers 
+" Save buffers in memory without confirmation
 set hidden
 
 " Command-line completion
@@ -21,15 +23,32 @@ set incsearch
 " 'matchit.vim' allows jumping from 'if' to 'else' using '%'
 runtime macros/matchit.vim
 
+" Automatically reload a file if it has been modified outside of Vim
+set autoread
+
 " 
 " Vim Environment
 " 
+" Display
+set scrolloff=5
+set showcmd
+
 " Line numbers
 set ruler
 set number
+set cursorline
+set cursorlineopt=number
+highlight			CursorLineNr	term=bold
+						\			ctermfg=Magenta	ctermbg=NONE
+						\			cterm=bold
+						\			guifg=Magenta	guibg=NONE
+						\			gui=bold		font=NONE
 
 " Indentation
 set tabstop=4
+set shiftwidth=4
+set expandtab
+set smarttab
 set autoindent
 
 " Text wrapping
@@ -41,3 +60,18 @@ set backspace=indent,eol,start
 " Filetype and syntax highlighting
 filetype plugin indent on
 syntax on
+
+" Open file with previous cursor location
+autocmd BufReadPost *
+	\ let line = line("'\"")
+	\ | if line >= 1 && line <= line("$") && &filetype !~# 'commit'
+	\      && index(['xxd', 'gitrebase', 'tutor'], &filetype) == -1
+	\      && !&diff
+	\ |   execute "normal! g`\""
+	\ | endif
+
+"
+" Vim Keybinds
+"
+" <Esc> in Insert mode
+inoremap jj <Esc>
