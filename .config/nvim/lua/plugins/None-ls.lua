@@ -10,10 +10,10 @@ local null_ls = require("null-ls")
 
 -- Setup
 null_ls.setup({
-	sources = {
-		-- Lua
-		null_ls.builtins.formatting.stylua,
-	},
+    sources = {
+        -- Lua
+        null_ls.builtins.formatting.stylua,
+    },
 })
 
 -- Keybindings

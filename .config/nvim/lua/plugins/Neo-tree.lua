@@ -16,14 +16,14 @@ local neotree = require("neo-tree")
 
 -- Setup
 neotree.setup({
-	filesystem = {
-		filtered_items = {
-			visible = true,
-		},
-	},
+    filesystem = {
+        filtered_items = {
+            visible = true,
+        },
+    },
 })
 
 -- Keymaps
 vim.keymap.set("n", "<Leader>t", function()
-	vim.cmd(":Neotree filesystem toggle left")
+    vim.cmd(":Neotree filesystem toggle left")
 end, {})

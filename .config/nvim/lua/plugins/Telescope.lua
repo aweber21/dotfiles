@@ -13,15 +13,15 @@ Ripgrep (ripgrep)
 
 -- Modules
 local telescope = require("telescope")
-local telescope_builtin = require('telescope/builtin')
+local telescope_builtin = require("telescope/builtin")
 
 -- Setup
 telescope.setup({
-	extensions = {
-		["ui-select"] = {
-			require("telescope.themes").get_dropdown({}),
-		},
-	},
+    extensions = {
+        ["ui-select"] = {
+            require("telescope.themes").get_dropdown({}),
+        },
+    },
 })
 
 -- To get ui-select loaded and working with telescope, you need to call

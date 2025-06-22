@@ -8,8 +8,8 @@ local onedark = require("onedark")
 
 -- Setup
 onedark.setup({
-	style = "dark",
-	transparent = true,
+    style = "dark",
+    transparent = true,
 })
 
 -- Load

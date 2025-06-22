@@ -22,26 +22,26 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 -- Setup
 mason.setup({})
 mason_lspconfig.setup({
-	ensure_installed = { "lua_ls" },
-	automatic_enable = true,
+    ensure_installed = { "lua_ls" },
+    automatic_enable = true,
 })
 vim.diagnostic.config({
-	update_in_insert = true,
-	signs = true,
-	virtual_text = true,
+    update_in_insert = true,
+    signs = true,
+    virtual_text = true,
 })
 
 -- Lsp Configurations
 -- Lua
 vim.lsp.config("lua_ls", {
-	settings = {
-		Lua = {
-			diagnostics = {
-				globals = { "vim" },
-			},
-			capabilities = capabilities,
-		},
-	},
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { "vim" },
+            },
+            capabilities = capabilities,
+        },
+    },
 })
 vim.lsp.enable("lua_ls")
 
