@@ -1,0 +1,68 @@
+--[[
+LuaSnip
+    - Expands snippets within Nvim-Cmp
+Cmp_LuaSnip
+    - Completes LuaSnip snippets
+Friendly-Snippets
+    - Allows for the usage of VS Code style snippets
+Cmp-Nvim-Lsp
+    - Allows for snippets to come from Lsps
+Nvim-Cmp
+    - Neovim completion tool that handles the window popup to select
+      completions and snippets.
+--]]
+
+return {
+    {
+        "L3MON4D3/LuaSnip",
+        version = "v2.4",
+        dependencies = {
+            "saadparwaiz1/cmp_luasnip",
+            "rafamadriz/friendly-snippets",
+        },
+        config = function()
+            -- Load VS Code Snippets
+            require("luasnip.loaders.from_vscode").lazy_load({})
+        end,
+    },
+    {
+        "hrsh7th/cmp-nvim-lsp",
+    },
+    {
+        "hrsh7th/nvim-cmp",
+        config = function()
+            -- Modules
+            local nvim_cmp = require("cmp")
+            local luasnip = require("luasnip")
+
+            -- Setup
+            nvim_cmp.setup({
+                --[[
+                completion = {
+                    autocomplete = false,
+                },
+                --]]
+                snippet = {
+                    expand = function(args)
+                        luasnip.lsp_expand(args.body)
+                    end,
+                },
+                window = {
+                    completion = nvim_cmp.config.window.bordered(),
+                    documentation = nvim_cmp.config.window.bordered(),
+                },
+                mapping = nvim_cmp.mapping.preset.insert({
+                    ["<C-c>"] = nvim_cmp.mapping.complete(),
+                    ["<Tab>"] = nvim_cmp.mapping.confirm({ select = true }),
+                    ["<Esc>"] = nvim_cmp.mapping.abort(),
+                }),
+                sources = nvim_cmp.config.sources({
+                    { name = "nvim_lsp" },
+                    { name = "luasnip" },
+                }, {
+                    { name = "buffer" },
+                }),
+            })
+        end,
+    },
+}

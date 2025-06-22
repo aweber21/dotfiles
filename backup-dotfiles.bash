@@ -66,6 +66,9 @@ cp -r "$CONFIG_SOURCE"/fastfetch "$CONFIG_DESTINATION"
 # Hypr Ecosystem
 cp -r "$CONFIG_SOURCE"/hypr "$CONFIG_DESTINATION"
 
+# Neovim
+cp -r "$CONFIG_SOURCE"/nvim "$CONFIG_DESTINATION"
+
 # Kitty
 cp -r "$CONFIG_SOURCE"/kitty "$CONFIG_DESTINATION"
 
