@@ -5,23 +5,23 @@ None-ls
 --]]
 
 return {
-	"nvimtools/none-ls.nvim",
-	dependencies = {
-		"nvim-lua/plenary.nvim",
-	},
-	config = function()
-		-- Modules
-		local null_ls = require("null-ls")
+    "nvimtools/none-ls.nvim",
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+    },
+    config = function()
+        -- Modules
+        local null_ls = require("null-ls")
 
-		-- Setup
-		null_ls.setup({
-			sources = {
-				-- Lua
-				null_ls.builtins.formatting.stylua,
-			},
-		})
+        -- Setup
+        null_ls.setup({
+            sources = {
+                -- Lua
+                null_ls.builtins.formatting.stylua,
+            },
+        })
 
-		-- Keybinds
-		vim.keymap.set("n", "<Leader>cf", vim.lsp.buf.format, {})
-	end,
+        -- Keybinds
+        vim.keymap.set("n", "<Leader>cf", vim.lsp.buf.format, {})
+    end,
 }

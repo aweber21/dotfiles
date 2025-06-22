@@ -7,9 +7,9 @@ Init.lua
 Source Vim Settings
 --]]
 vim.cmd([[
-	set runtimepath^=~/.config/vim
-	let &packpath = &runtimepath
-	source ~/.config/vim/vimrc
+    set runtimepath^=~/.config/vim
+    let &packpath = &runtimepath
+    source ~/.config/vim/vimrc
 ]])
 
 --[[
