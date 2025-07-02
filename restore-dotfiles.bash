@@ -82,9 +82,6 @@ cp "$CONFIG_SOURCE"/vim/vimrc "$CONFIG_DESTINATION"/vim
 # Waybar
 cp -r "$CONFIG_SOURCE"/waybar "$CONFIG_DESTINATION"
 
-# Wofi
-cp -r "$CONFIG_SOURCE"/wofi "$CONFIG_DESTINATION"
-
 # Restore .ssh dotfiles
 # Source
 SSH_SOURCE="$RESTORE_SOURCE"/.ssh
