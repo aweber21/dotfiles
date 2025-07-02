@@ -72,6 +72,9 @@ cp -r "$CONFIG_SOURCE"/kitty "$CONFIG_DESTINATION"
 # Neovim
 cp -r "$CONFIG_SOURCE"/nvim "$CONFIG_DESTINATION"
 
+# Rofi-Wayland
+cp -r "$CONFIG_SOURCE"/rofi "$CONFIG_DESTINATION"
+
 # UWSM
 cp -r "$CONFIG_SOURCE"/uwsm "$CONFIG_DESTINATION"
 
