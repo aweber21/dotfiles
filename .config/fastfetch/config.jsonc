@@ -1,110 +1,145 @@
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
+        "type": "auto",
+        "source": "arch",
+        "width": 65,
+        "height": 35,
         "padding": {
-            "top": 2
+            "top": 3,
+            "left": 2,
+            "right": 2
+        },
+        "color": {
+            "1": "cyan",
+            "2": "cyan"
+        }
+    },
+    "display": {
+        "separator": ": ",
+        "color": {
+            "title": "cyan",
+            "keys": "cyan"
+        },
+        "key": {
+            "width": 0,
+            "type": "both"
+        },
+        "bar": {
+            "width": 10,
+            "charElapsed": "■",
+            "charTotal": "-"
+        },
+        "percent": {
+            "type": 9,
+            "color": {
+                "green": "green",
+                "yellow": "light_yellow",
+                "red": "light_red"
+            }
         }
     },
     "modules": [
         "title",
         "separator",
-        "os",
-        "host",
-        "bios",
-        "bootmgr",
-        "board",
-        "chassis",
-        "kernel",
-        "initsystem",
-        "uptime",
-        "loadavg",
-        "processes",
-        "packages",
-        "shell",
-        "editor",
-        "display",
-        "brightness",
-        "monitor",
-        "lm",
-        "de",
-        "wm",
-        "wmtheme",
-        "theme",
-        "icons",
-        "font",
-        "cursor",
-        "wallpaper",
-        "terminal",
-        "terminalfont",
-        "terminalsize",
-        "terminaltheme",
+        {
+            "type": "os",
+            "key": "OS",
+            "keyColor": "keys"
+        },
+        {
+            "type": "kernel",
+            "key": "Kernel",
+            "keyColor": "keys"
+        },
+        {
+            "type": "bootmgr",
+            "key": "Boot Manager",
+            "keyColor": "keys"
+        },
+        "break",
+        {
+            "type": "host",
+            "key": "Host",
+            "keyColor": "keys",
+            "format": "{version}"
+        },
+        {
+            "type": "display",
+            "key": "Display",
+            "keyColor": "keys",
+        },
+        {
+            "type": "battery",
+            "key": "Battery",
+            "keyColor": "keys"
+        },
+        {
+            "type": "uptime",
+            "key": "Uptime",
+            "keyColor": "keys",
+        },
+        "break",
         {
             "type": "cpu",
+            "key": "CPU",
+            "keyColor": "keys",
             "showPeCoreCount": true,
             "temp": true
         },
-        "cpucache",
-        "cpuusage",
         {
             "type": "gpu",
-            "driverSpecific": true,
-            "temp": true
+            "key": "GPU",
+            "keyColor": "keys",
         },
-        "memory",
-        "physicalmemory",
-        "swap",
-        "disk",
-        "btrfs",
-        "zpool",
         {
-            "type": "battery",
-            "temp": true
+            "type": "memory",
+            "key": "Memory",
+            "keyColor": "keys",
         },
-        "poweradapter",
-        "player",
-        "media",
         {
-            "type": "publicip",
-            "timeout": 1000
+            "type": "disk",
+            "key": "Disk",
+            "keyColor": "keys",
+        },
+        "break",
+        {
+            "type": "wm",
+            "key": "Window Manager",
+            "keyColor": "keys",
+        },
+        {
+            "type": "terminal",
+            "key": "Terminal",
+            "keyColor": "keys",
+        },
+        {
+            "type": "shell",
+            "key": "Shell",
+            "keyColor": "keys",
+        },
+        "break",
+        {
+            "type": "wifi",
+            "key": "WiFi",
+            "keyColor": "keys",
         },
         {
             "type": "localip",
-            "showIpv6": true,
-            "showMac": true,
-            "showSpeed": true,
-            "showMtu": true,
-            "showLoop": true,
-            "showFlags": true,
-            "showAllIps": true
+            "key": "Local IP",
+            "keyColor": "keys",
+            "format": "{ipv4} - {ifname}"
         },
-        "dns",
-        "wifi",
-        "datetime",
-        "locale",
-        "vulkan",
-        "opengl",
-        "opencl",
-        "users",
-        "bluetooth",
-        "bluetoothradio",
-        "sound",
-        "camera",
-        "gamepad",
-        "mouse",
-        "keyboard",
         {
-          "type": "weather",
-          "timeout": 1000
+            "type": "publicip",
+            "key": "Public IP",
+            "keyColor": "keys",
         },
-        "netio",
-        "diskio",
+        "separator",
         {
-            "type": "physicaldisk",
-            "temp": true
+            "type": "datetime",
+            "key": "Date & Time",
+            "keyColor": "keys",
         },
-        "tpm",
-        "version",
-        "break",
-        "colors"
     ]
 }
