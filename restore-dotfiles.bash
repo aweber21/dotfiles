@@ -57,9 +57,6 @@ CONFIG_SOURCE="$RESTORE_SOURCE"/.config
 mkdir -p "$RESTORE_DESTINATION"/.config
 CONFIG_DESTINATION="$RESTORE_DESTINATION"/.config
 
-# Backgrounds
-cp -r "$CONFIG_SOURCE"/backgrounds "$CONFIG_DESTINATION"
-
 # Fastfetch
 cp -r "$CONFIG_SOURCE"/fastfetch "$CONFIG_DESTINATION"
 
@@ -71,6 +68,9 @@ cp -r "$CONFIG_SOURCE"/kitty "$CONFIG_DESTINATION"
 
 # Neovim
 cp -r "$CONFIG_SOURCE"/nvim "$CONFIG_DESTINATION"
+
+# Rofi-Wayland
+cp -r "$CONFIG_SOURCE"/rofi "$CONFIG_DESTINATION"
 
 # UWSM
 cp -r "$CONFIG_SOURCE"/uwsm "$CONFIG_DESTINATION"
