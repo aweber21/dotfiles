@@ -2,4 +2,4 @@
 // Rofi-Wayland                                                               //
 //----------------------------------------------------------------------------//
 
-// @theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
