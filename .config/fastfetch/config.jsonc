@@ -18,8 +18,8 @@
     "display": {
         "separator": ": ",
         "color": {
-            "title": "cyan",
-            "keys": "cyan"
+            "title": "#FB3F60",
+            "keys": "#FDCF34"
         },
         "key": {
             "width": 0,
