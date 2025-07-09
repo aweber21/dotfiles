@@ -164,7 +164,7 @@
         
         // Menu
         "menu": "on-click",
-        "menu-file": "$HOME/.config/waybar/custom_power.xml", // Menu file in resources folder
+        "menu-file": "$HOME/.config/waybar/custom/power.xml", // Menu file in resources folder
         "menu-actions": {
             "suspend": "systemctl suspend",
             "shutdown": "shutdown",
