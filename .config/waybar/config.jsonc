@@ -10,7 +10,7 @@
     "layer": "top",
     "position": "top",
     "height": 30,
-    "width": 1366, // Resolution Width: 1366x768
+    "width": 1366, // Resolution: 1366x768
     "spacing": 4,
     "start_hidden": false,
     "modifier-reset": "press",
@@ -29,11 +29,8 @@
     ],
     "modules-right": [
         "idle_inhibitor",
-        "pulseaudio",
         "network",
-        "cpu",
-        "memory",
-        "temperature",
+        "pulseaudio",
         "battery",
         "clock",
         "custom/power"
@@ -45,15 +42,11 @@
         "all-outputs": true,
         
         // Formatting
-        "format": "{name}: {icon}",
-        "format-icons": {
-            "active": "",
-            "default": ""
-        }
+        "format": "{name}",
     },
     "hyprland/window": {
         // Module-Specific
-        // "icon": true
+        "icon": true
     },
     "idle_inhibitor": {
         // Formatting
@@ -78,6 +71,8 @@
         // Tooltip
         "tooltip": true,
         "tooltip-format": "{desc}",
+
+        // Actions
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
         "on-click-right": "pavucontrol"
     },
@@ -86,42 +81,20 @@
         "family": "ipv4",
         
         // Formatting
-        "format": "{ifname}",
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{essid} ({signalStrength}%) ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
+        "format": "Finding",
+        "format-wifi": "{frequency} GHz  ",
+        "format-ethernet": "Wired ",
+        "format-disconnected": "None 󰖪",
         
         // Tooltip
         "tooltip": true,
-        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
+        "tooltip-format": "{ifname}",
+        "tooltip-format-wifi": "{essid}\n{ipaddr}",
+        "tooltip-format-ethernet": "{essid}\n{ipaddr}",
+        "tooltip-format-disconnected": "Disconnected",
+
+        // Actions
         "on-click-right": "nm-connection-editor"
-    },
-    "cpu": {
-        // Formatting
-        "format": "{usage}% ",
-        
-        // Tooltip
-        "tooltip": true
-    },
-    "memory": {
-        // Formatting
-        "format": "{percentage}% ",
-        
-        // Tooltip
-        "tooltip": true,
-        "tooltip-format": "{used} / {total} GiB"
-    },
-    "temperature": {
-        // Module-Specific
-        "critical-threshold": 80,
-        
-        // Formatting
-        "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""],
-        
-        // Tooltip
-        "tooltip": false
     },
     "battery": {
         // Module-Specific
@@ -135,9 +108,12 @@
         // Formatting
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-icons": ["", "", "", "", ""]
+        "format-charging": "{capacity}% {icon}󱐋",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "justify": "center",
+        
+        // Actions
+        "on-click-right": "kitty -e btop"
     },
     "clock": {
         // Module-Specific
@@ -146,25 +122,37 @@
         "timezone": "America/Chicago",
         
         // Formatting
-        // "format": "{:%H:%M}", // 24 Hour Clock
         "format": "{:%I:%M %p}", // 12 Hour Clock
-        "format-alt": "{:%m-%d-%Y}",
         
         // Tooltip
         "tooltip": true,
-        // "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
-        "tooltip-format": "<tt><big>{calendar}</big></tt>"
+        "tooltip-format": "<tt><big>{calendar}</big></tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "format": {
+                "months": "<span color='#fb3f60'><b>{}</b></span>",
+                "weekdays": "<span color='#ffffff'><b>{}</b></span>",
+                "days": "<span color='#fdcf34'><b>{}</b></span>",
+                "today": "<span color='#fb3f60'><b><u>{}</u></b></span>"
+            }
+        },
+
+        // Actions
+        "actions": {
+            "on-click-right": "mode"
+        }
     },
     "custom/power": {
         // Formatting
-        "format" : "   ",
+        "format" : "  ",
         
         // Tooltip
         "tooltip": false,
         
         // Menu
         "menu": "on-click",
-        "menu-file": "$HOME/.config/waybar/custom/power.xml", // Menu file in resources folder
+        "menu-file": "$HOME/.config/waybar/custom/power.xml",
         "menu-actions": {
             "suspend": "systemctl suspend",
             "shutdown": "shutdown",
