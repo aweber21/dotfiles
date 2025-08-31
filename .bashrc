@@ -12,3 +12,6 @@ alias grep='grep --color=auto'
 
 # Environment Variables
 PS1='[\u@\h \W]\$ '
+
+# Git
+source /usr/share/git/completion/git-completion.bash
