@@ -10,7 +10,6 @@
     "layer": "top",
     "position": "top",
     "height": 30,
-    "width": 1366, // Resolution: 1366x768
     "spacing": 4,
     "start_hidden": false,
     "modifier-reset": "press",
