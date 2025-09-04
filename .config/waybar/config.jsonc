@@ -65,7 +65,7 @@
     "pulseaudio": {
         // Formatting
         "format": "{volume}% {icon}  {format_source}",
-        "format-muted": "  {format_source}",
+        "format-muted": "  {format_source}",
         "format-source": "",
         "format-source-muted": "",
         "format-icons": {
