@@ -2,4 +2,728 @@
 // Rofi-Wayland                                                               //
 //----------------------------------------------------------------------------//
 
-@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
+* {
+    // Variables
+    wallpaperPrimary: rgba(251, 63, 96, 1.0);
+    wallpaperSecondary: rgba(253, 207, 52, 1.0);
+    kittyBackground: rgba(0, 0, 0, 0.8);
+    kittyForeground: rgba(221, 221, 221, 1.0);
+    
+    // Generic Background and Foreground
+    background: var(kittyBackground);
+    foreground: var(kittyForeground);
+    
+    // Selected Element Background
+    selectedBackground: var(wallpaperPrimary);
+    
+    // Separator
+    separatorColor: var(wallpaperSecondary);
+    
+    // Global Text Color
+    text-color: var(kittyForeground);
+}
+
+//--- Window ---//
+window {
+    enabled: true;
+    children: [ "mainbox" ];
+    
+    // Module Specific
+    // font: "JetBrainsMono Nerd Font";
+    transparency: "real";
+    location: center;
+    anchor: center;
+    fullscreen: false;
+    width: none;
+    x-offset: 0px;
+    y-offset: 0px;
+    orientation: vertical;
+    spacing: 0px;
+    
+    // Background and Foreground
+    background-color: var(background);
+    background-image: none;
+    
+    // Padding
+    padding: 10px;
+    
+    // Border
+    border-color: var(wallpaperPrimary);
+    border: 2px;
+    border-radius: 2px;
+    border-aa: false;
+    border-disable-nvidia-workaround: false;
+    
+    // Margin
+    margin: 0px;
+    
+    // Cursor
+    cursor: default;
+}
+
+//--- Overlay ---//
+overlay {
+    enabled: true;
+    
+    // Module Specific
+    timeout: 5;
+    
+    // Background and Foreground
+    background-color: var(background);
+    background-image: none;
+    foreground-color: var(foreground);
+    
+    // Padding
+    padding: 0px 2px;
+    
+    // Border
+    border-color: var(separatorColor);
+    border: 1px;
+    border-radius: 0px;
+    border-aa: false;
+    border-disable-nvidia-workaround: false;
+    
+    // Margin
+    margin: 0px 2px;
+    
+    // Cursor
+    cursor: default;
+}
+
+//--- Mainbox ---//
+mainbox {
+    enabled: true;
+    children: [ "inputbar","message","listview","mode-switcher" ];
+    
+    // Module Specific
+    orientation: vertical;
+    spacing: 0px;
+    
+    // Background and Foreground
+    background-color: var(background);
+    background-image: none;
+    foreground-color: var(foreground);
+    
+    // Padding
+    padding: 0px;
+    
+    // Border
+    border-color: none;
+    border: 0px;
+    border-radius: 0px;
+    border-aa: false;
+    border-disable-nvidia-workaround: false;
+    
+    // Margin
+    margin: 0px;
+    
+    // Cursor
+    cursor: default;
+}
+
+//--- Input Bar ---//
+inputbar {
+    enabled: true;
+    children: [ "prompt","textbox-prompt-colon","entry","overlay","num-filtered-rows","textbox-num-sep","num-rows","case-indicator" ];
+    
+    // Module Specific
+    orientation: horizontal;
+    spacing: 0px;
+    
+    // Background and Foreground
+    background-color: var(background);
+    background-image: none;
+    foreground-color: var(foreground);
+    
+    // Padding
+    padding: 0px;
+    
+    // Border
+    border-color: none;
+    border: 0px;
+    border-radius: 0px;
+    border-aa: false;
+    border-disable-nvidia-workaround: false;
+    
+    // Margin
+    margin: 0px;
+    
+    // Cursor
+    cursor: default;
+}
+
+prompt {
+    enabled: true;
+    
+    // Module Specific
+    // font: "JetBrainsMono Nerd Font";
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    text-transform: none;
+    highlight: none;
+    width: none;
+    expand: false;
+    
+    // Background and Foreground
+    background-color: var(background);
+    background-image: none;
+    foreground-color: var(foreground);
+    
+    // Padding
+    padding: 0px;
+    
+    // Border
+    border-color: none;
+    border: 0px;
+    border-radius: 0px;
+    border-aa: false;
+    border-disable-nvidia-workaround: false;
+    
+    // Margin
+    margin: 0px;
+    
+    // Cursor
+    cursor: default;
+}
+
+textbox-prompt-colon {
+    enabled: true;
+    
+    // Module Specific
+    // font: "JetBrainsMono Nerd Font";
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    text-transform: none;
+    highlight: none;
+    width: none;
+    str: ":";
+    expand: false;
+    
+    // Background and Foreground
+    background-color: var(background);
+    background-image: none;
+    foreground-color: var(foreground);
+    
+    // Padding
+    padding: 0px 5px 0px 0px;
+    
+    // Border
+    border-color: none;
+    border: 0px;
+    border-radius: 0px;
+    border-aa: false;
+    border-disable-nvidia-workaround: false;
+    
+    // Margin
+    margin: 0px;
+    
+    // Cursor
+    cursor: default;
+}
+
+entry {
+    enabled: true;
+    
+    // Module Specific
+    // font: "JetBrainsMono Nerd Font";
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+    text-transform: none;
+    highlight: none;
+    width: none;
+    placeholder: "Type to filter";
+    placeholder-markup: true;
+    placeholder-color: Gray;
+    markup: true;
+    blink: true;
+    tab-stops: none;
+    cursor-width: 2px;
+    cursor-color: var(text-color);
+    cursor-outline: false;
+    cursor-outline-width: 0px;
+    cursor-outline-color: rgba(0, 0, 0, 1.0);
+    hide-cursor-on-empty: true;
+    text-outline: false;
+    text-outline-width: 0px;
+    text-outline-color: rgba(0, 0, 0, 1.0);
+    expand: true;
+    
+    // Background and Foreground
+    background-color: var(background);
+    background-image: none;
+    foreground-color: var(foreground);
+    
+    // Padding
+    padding: 0px;
+    
+    // Border
+    border-color: none;
+    border: 0px;
+    border-radius: 0px;
+    border-aa: false;
+    border-disable-nvidia-workaround: false;
+    
+    // Margin
+    margin: 0px;
+    
+    // Cursor
+    cursor: text;
+}
+
+num-filtered-rows {
+    enabled: true;
+    
+    // Module Specific
+    // font: "JetBrainsMono Nerd Font";
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    text-transform: none;
+    highlight: none;
+    width: none;
+    expand: false;
+    
+    // Background and Foreground
+    background-color: var(background);
+    background-image: none;
+    foreground-color: var(foreground);
+    
+    // Padding
+    padding: 0px;
+    
+    // Border
+    border-color: none;
+    border: 0px;
+    border-radius: 0px;
+    border-aa: false;
+    border-disable-nvidia-workaround: false;
+    
+    // Margin
+    margin: 0px;
+    
+    // Cursor
+    cursor: default;
+}
+
+textbox-num-sep {
+    enabled: true;
+    
+    // Module Specific
+    // font: "JetBrainsMono Nerd Font";
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    text-transform: none;
+    highlight: none;
+    width: none;
+    str: "/";
+    expand: false;
+    
+    // Background and Foreground
+    background-color: var(background);
+    background-image: none;
+    foreground-color: var(foreground);
+    
+    // Padding
+    padding: 0px;
+    
+    // Border
+    border-color: none;
+    border: 0px;
+    border-radius: 0px;
+    border-aa: false;
+    border-disable-nvidia-workaround: false;
+    
+    // Margin
+    margin: 0px;
+    
+    // Cursor
+    cursor: default;
+}
+
+num-rows {
+    enabled: true;
+    
+    // Module Specific
+    // font: "JetBrainsMono Nerd Font";
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    text-transform: none;
+    highlight: none;
+    width: none;
+    expand: false;
+    
+    // Background and Foreground
+    background-color: var(background);
+    background-image: none;
+    foreground-color: var(foreground);
+    
+    // Padding
+    padding: 0px;
+    
+    // Border
+    border-color: none;
+    border: 0px;
+    border-radius: 0px;
+    border-aa: false;
+    border-disable-nvidia-workaround: false;
+    
+    // Margin
+    margin: 0px;
+    
+    // Cursor
+    cursor: default;
+}
+
+case-indicator {
+    enabled: true;
+    
+    // Module Specific
+    // font: "JetBrainsMono Nerd Font";
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    text-transform: none;
+    highlight: none;
+    width: none;
+    expand: false;
+    
+    // Background and Foreground
+    background-color: var(background);
+    background-image: none;
+    foreground-color: var(foreground);
+    
+    // Padding
+    padding: 0px;
+    
+    // Border
+    border-color: none;
+    border: 0px;
+    border-radius: 0px;
+    border-aa: false;
+    border-disable-nvidia-workaround: false;
+    
+    // Margin
+    margin: 0px;
+    
+    // Cursor
+    cursor: default;
+}
+
+//--- Message ---//
+message {
+    enabled: true;
+    
+    // Module Specific
+    // font: "JetBrainsMono Nerd Font";
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    text-transform: none;
+    highlight: none;
+    width: none;
+    expand: false;
+    
+    // Background and Foreground
+    background-color: var(background);
+    background-image: none;
+    foreground-color: var(foreground);
+    
+    // Padding
+    padding: 5px 0px 0px 0px;
+    
+    // Border
+    border-color: var(separatorColor);
+    border: 2px dash 0px 0px 0px;
+    border-radius: 0px;
+    border-aa: false;
+    border-disable-nvidia-workaround: false;
+    
+    // Margin
+    margin: 5px 0px 0px 0px;
+    
+    // Cursor
+    cursor: default;
+}
+
+textbox {
+    enabled: true;
+    
+    // Module Specific
+    // font: "JetBrainsMono Nerd Font";
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    text-transform: none;
+    highlight: none;
+    width: none;
+    expand: false;
+    
+    // Background and Foreground
+    background-color: var(background);
+    background-image: none;
+    foreground-color: var(foreground);
+    
+    // Padding
+    padding: 0px;
+    
+    // Border
+    border-color: none;
+    border: 0px;
+    border-radius: 0px;
+    border-aa: false;
+    border-disable-nvidia-workaround: false;
+    
+    // Margin
+    margin: 0px;
+
+    // Cursor
+    cursor: default;
+}
+
+//--- List View ---//
+listview {
+    enabled: true;
+    
+    // Module Specific
+    layout: vertical;
+    flow: vertical;
+    lines: 10;
+    fixed-height: true;
+    columns: 1;
+    fixed-columns: true;
+    dynamic: false;
+    cycle: true;
+    spacing: 2px;
+    reverse: false;
+    require-input: false;
+    scrollbar: true;
+    scrollbar-width: 4px;
+    
+    // Background and Foreground
+    background-color: var(background);
+    background-image: none;
+    foreground-color: var(foreground);
+    
+    // Padding
+    padding: 5px 0px 0px 0px;
+    
+    // Border
+    border-color: var(separatorColor);
+    border: 2px dash 0px 0px 0px;
+    border-radius: 0px;
+    border-aa: false;
+    border-disable-nvidia-workaround: false;
+    
+    // Margin
+    margin: 5px 0px 0px 0px;
+    
+    // Cursor
+    cursor: default;
+}
+
+scrollbar {
+    enabled: true;
+    
+    // Module Specific
+    width: 4px;
+    handle-width: 8px;
+    color: var(wallpaperSecondary);
+    handle-color: var(wallpaperSecondary);
+    
+    // Background and Foreground
+    background-color: var(background);
+    background-image: none;
+    foreground-color: var(foreground);
+    
+    // Padding
+    padding: 0px;
+    
+    // Border
+    border-color: none;
+    border: 0px;
+    border-radius: 0px;
+    border-aa: false;
+    border-disable-nvidia-workaround: false;
+    
+    // Margin
+    margin: 0px;
+    
+    // Cursor
+    cursor: default;
+}
+
+//--- Elements ---//
+element {
+    enabled: true;
+    children: [ "element-icon","element-text" ];
+    
+    // Module Specific
+    // font: "JetBrainsMono Nerd Font";
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    text-transform: none;
+    highlight: none;
+    width: none;
+    expand: false;
+    spacing: 5px;
+    
+    // Background and Foreground
+    background-color: var(background);
+    background-image: none;
+    foreground-color: var(foreground);
+    
+    // Padding
+    padding: 1px;
+    
+    // Border
+    border-color: none;
+    border: 0px;
+    border-radius: 0px;
+    border-aa: false;
+    border-disable-nvidia-workaround: false;
+    
+    // Margin
+    margin: 0px;
+    
+    // Cursor
+    cursor: pointer;
+}
+
+element selected {
+    background-color: var(selectedBackground);
+}
+
+element-icon {
+    enabled: true;
+    
+    // Module Specific
+    size: 1.0000em;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    expand: false;
+    
+    // Background and Foreground
+    background-color: transparent;
+    background-image: none;
+    foreground-color: transparent;
+    
+    // Padding
+    padding: 1px;
+    
+    // Border
+    border-color: none;
+    border: 0px;
+    border-radius: 0px;
+    border-aa: false;
+    border-disable-nvidia-workaround: false;
+    
+    // Margin
+    margin: 0px;
+    
+    // Cursor
+    cursor: pointer;
+}
+
+element-text {
+    enabled: true;
+    
+    // Module Specific
+    // font: "JetBrainsMono Nerd Font";
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+    text-transform: none;
+    highlight: none;
+    width: none;
+    expand: true;
+    
+    // Background and Foreground
+    background-color: transparent;
+    background-image: none;
+    foreground-color: transparent;
+    
+    // Padding
+    padding: 0px;
+    
+    // Border
+    border-color: none;
+    border: 0px;
+    border-radius: 0px;
+    border-aa: false;
+    border-disable-nvidia-workaround: false;
+    
+    // Margin
+    margin: 0px;
+    
+    // Cursor
+    cursor: pointer;
+}
+
+mode-switcher {
+    enabled: true;
+    children: [ "button" ];
+    
+    // Module Specific
+    // font: "JetBrainsMono Nerd Font";
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    text-transform: none;
+    highlight: none;
+    width: none;
+    expand: false;
+    
+    // Background and Foreground
+    background-color: var(background);
+    background-image: none;
+    foreground-color: var(foreground);
+    
+    // Padding
+    padding: 5px 0px 0px 0px;
+    
+    // Border
+    border-color: var(separatorColor);
+    border: 2px dash 0px 0px 0px;
+    border-radius: 0px;
+    border-aa: false;
+    border-disable-nvidia-workaround: false;
+    
+    // Margin
+    margin: 5px 0px 0px 0px;
+    
+    // Cursor
+    cursor: default;
+}
+
+button {
+    enabled: true;
+    
+    // Module Specific
+    // font: "JetBrainsMono Nerd Font";
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    text-transform: none;
+    highlight: none;
+    width: none;
+    expand: true;
+    spacing: 0;
+    
+    // Background and Foreground
+    background-color: var(background);
+    background-image: none;
+    foreground-color: var(foreground);
+    
+    // Padding
+    padding: 0px;
+    
+    // Border
+    border-color: none;
+    border: 0px;
+    border-radius: 0px;
+    border-aa: false;
+    border-disable-nvidia-workaround: false;
+    
+    // Margin
+    margin: 0px;
+    
+    // Cursor
+    cursor: pointer;
+}
+
+button selected {
+    background-color: var(selectedBackground);
+}
