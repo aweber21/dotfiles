@@ -7,5 +7,5 @@ if uwsm check may-start; then
 	exec systemd-cat -t uwsm_start uwsm start hyprland-uwsm.desktop
 fi
 
-# Include .bashrc
+# Source .bashrc
 [[ -f ~/.bashrc ]] && . ~/.bashrc
