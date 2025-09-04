@@ -8,13 +8,13 @@ configuration {
     
     //--- Font ---//
     font: "JetBrainsMono Nerd Font 12";
-    show-icons: false;
+    show-icons: true;
     // icon-theme: ;
     // application-fallback-icon: ;
     
     //--- Layout ---//
     eh: 1;
-    sidebar-mode: true;
+    sidebar-mode: false;
     fixed-num-lines: true;
     
     //--- Position ---///
