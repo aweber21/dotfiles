@@ -2,5 +2,5 @@
 # ~/.bash_profile
 #
 
-# Include .bashrc
+# Source .bashrc
 [[ -f ~/.bashrc ]] && . ~/.bashrc
