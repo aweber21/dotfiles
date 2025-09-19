@@ -67,11 +67,11 @@ return {
             vim.lsp.enable("lua_ls")
 
             -- Keybinds
-            vim.keymap.set("n", "<Leader>cc", vim.lsp.buf.hover, {})
-            vim.keymap.set("n", "<Leader>cd", vim.lsp.buf.definition, {})
-            vim.keymap.set("n", "<Leader>cD", vim.lsp.buf.declaration, {})
-            vim.keymap.set("n", "<Leader>cr", vim.lsp.buf.references, {})
-            vim.keymap.set("n", "<Leader>ca", vim.lsp.buf.code_action, {})
+            vim.keymap.set("n", "<Leader>cc", vim.lsp.buf.hover, { desc = "Display hover information" })
+            vim.keymap.set("n", "<Leader>cd", vim.lsp.buf.definition, { desc = "Go to definition" })
+            vim.keymap.set("n", "<Leader>cD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
+            vim.keymap.set("n", "<Leader>cr", vim.lsp.buf.references, { desc = "Show references" })
+            vim.keymap.set("n", "<Leader>ca", vim.lsp.buf.code_action, { desc = "Code Actions" })
         end,
     },
 }

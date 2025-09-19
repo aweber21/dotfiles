@@ -26,7 +26,7 @@ return {
             vim.keymap.set("n", "<Leader>cf", function()
                 vim.lsp.buf.format()
                 vim.cmd(":retab")
-            end, {})
+            end, { desc = "Format" })
         end,
     },
 }

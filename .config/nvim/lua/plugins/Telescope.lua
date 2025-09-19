@@ -32,14 +32,23 @@ return {
             telescope.load_extension("ui-select")
 
             -- Keymaps
-            vim.keymap.set("n", "<Leader>ff", telescope_builtin.find_files, {})
-            vim.keymap.set("n", "<Leader>fg", telescope_builtin.live_grep, {})
+            vim.keymap.set("n", "<Leader>s", telescope_builtin.builtin, { desc = "Telescope" })
+            vim.keymap.set("n", "<Leader>ff", telescope_builtin.find_files, { desc = "Find Files" })
+            vim.keymap.set("n", "<Leader>fg", telescope_builtin.live_grep, { desc = "Grep Files" })
             vim.keymap.set("n", "<Leader>b", function()
                 telescope_builtin.buffers({
                     sort_mru = true,
                 })
-                vim.api.nvim_input("<Esc>")
-            end, {})
+                vim.api.nvim_input("<Space><Esc>")
+            end, { desc = "Buffers" })
+            vim.keymap.set("n", "<Leader>r", function()
+                telescope_builtin.registers({})
+                vim.api.nvim_input("<Space><Esc>")
+            end, { desc = "Registers" })
+            vim.keymap.set("n", "<Leader>m", function()
+                telescope_builtin.marks({})
+                vim.api.nvim_input("<Space><Esc>")
+            end, { desc = "Marks" })
         end,
     },
     {

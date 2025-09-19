@@ -35,21 +35,21 @@ return {
                     action = "focus",
                     position = "left",
                 })
-            end, {})
+            end, { desc = "Toggle focus" })
             vim.keymap.set("n", "<Leader>to", function()
                 neotree_command.execute({
                     source = "filesystem",
                     action = "show",
                     position = "left",
                 })
-            end, {})
+            end, { desc = "Open" })
             vim.keymap.set("n", "<Leader>tc", function()
                 neotree_command.execute({
                     source = "filesystem",
                     action = "close",
                     position = "left",
                 })
-            end, {})
+            end, { desc = "Close" })
         end,
     },
 }

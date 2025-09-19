@@ -26,6 +26,9 @@ require("lazy").setup({
     -- OneDark
     { import = "colorschemes/OneDark" },
 
+    -- VSCode
+    { import = "colorschemes/VSCode" },
+
     -- Plugins
     -- Telescope, Ripgrep, Telescope-UI-Select
     { import = "plugins/Telescope" },
@@ -39,6 +42,9 @@ require("lazy").setup({
     -- Lualine
     { import = "plugins/Lualine" },
 
+    -- Which-Key
+    { import = "plugins/Which-Key" },
+
     -- Lsp Configuration
     -- Mason, Mason-LspConfig, Nvim-LspConfig
     { import = "plugins/LspConfig" },
@@ -50,6 +56,7 @@ require("lazy").setup({
     -- Autocompletion and Snippets
     -- LuaSnip, Cmp_LuaSnip, Friendly-Snippets, Cmp-Nvim-Lsp, Nvim-Cmp
     { import = "plugins/Completions" },
+    { import = "plugins/Autopairs"},
 
     -- Debugging
     -- Nvim-Dap-UI, Nvim-Dap, Nvim-Nio

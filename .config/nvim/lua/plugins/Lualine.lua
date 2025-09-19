@@ -17,7 +17,7 @@ return {
             lualine.setup({
                 options = {
                     icons_enabled = true,
-                    theme = "onedark",
+                    theme = "auto",
                     component_separators = { left = "", right = "" },
                     section_separators = { left = "", right = "" },
                     disabled_filetypes = {
@@ -29,9 +29,9 @@ return {
                     always_show_tabline = true,
                     globalstatus = false,
                     refresh = {
-                        statusline = 1000,
                         tabline = 1000,
                         winbar = 1000,
+                        statusline = 1000,
                         refresh_time = 16, -- ~60fps
                         events = {
                             "WinEnter",
@@ -47,22 +47,6 @@ return {
                         },
                     },
                 },
-                sections = {
-                    lualine_a = { "mode" },
-                    lualine_b = { "branch", "diff", "diagnostics" },
-                    lualine_c = {}, --"filename"
-                    lualine_x = { "encoding", "fileformat", "filetype" },
-                    lualine_y = { "progress" },
-                    lualine_z = { "location" },
-                },
-                inactive_sections = {
-                    lualine_a = {},
-                    lualine_b = {},
-                    lualine_c = { "filename" },
-                    lualine_x = { "location" },
-                    lualine_y = {},
-                    lualine_z = {},
-                },
                 tabline = {},
                 winbar = {
                     lualine_a = { "filename" },
@@ -70,8 +54,54 @@ return {
                 inactive_winbar = {
                     lualine_a = { "filename" },
                 },
+                sections = {
+                    lualine_a = { "mode" },
+                    lualine_b = { "branch", "diff", "diagnostics" },
+                    lualine_c = {},
+                    lualine_x = { "encoding", "fileformat", "filetype" },
+                    lualine_y = { "progress" },
+                    lualine_z = { "location" },
+                },
+                inactive_sections = {
+                    lualine_a = {},
+                    lualine_b = {},
+                    lualine_c = {},
+                    lualine_x = { "location" },
+                    lualine_y = {},
+                    lualine_z = {},
+                },
                 extensions = {},
             })
+
+            -- Colorscheme Overrides
+            -- VSCode
+            if vim.g.colors_name == "vscode" then
+                local vscode_colors = require("vscode/colors").get_colors()
+                -- lualine.setup({
+                --     options = {
+                --         theme = {
+                --             normal = {
+                --                 a = { fg = "#ffffff", bg = vscode_colors.vscBlue, gui = "bold" },
+                --             },
+                --             insert = {
+                --                 a = { fg = "#ffffff", bg = vscode_colors.vscGreen, gui = "bold" },
+                --             },
+                --             visual = {
+                --                 a = { fg = "#ffffff", bg = vscode_colors.vscViolet, gui = "bold" },
+                --             },
+                --             command = {
+                --                 a = { fg = vscode_colors.vscFront, bg = vscode_colors.vscOrange, gui = "bold" },
+                --             },
+                --             replace = {
+                --                 a = { fg = "#ffffff", bg = vscode_colors.vscRed, gui = "bold" },
+                --             },
+                --             inactive = {
+                --                 a = { fg = vscode_colors.vscFront, bg = vscode_colors.vscGray },
+                --             },
+                --         },
+                --     },
+                -- })
+            end
         end,
     },
 }

@@ -13,9 +13,22 @@ vim.cmd([[
 ]])
 
 --[[
+Neovim Overrides
+--]]
+vim.o.showmode = false
+
+--[[
 Keybinds
 --]]
 require("config/Keybinds")
+
+--[[
+Colorscheme
+    - Set global variable here and actually set colorscheme in specific
+      colorscheme lua file
+    - Must be set before Lazy executes
+--]]
+vim.g.colors_name = "vscode"
 
 --[[
 Lazy

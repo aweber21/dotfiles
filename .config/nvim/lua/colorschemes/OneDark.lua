@@ -1,6 +1,6 @@
 --[[
 OneDark
-    - Colorscheme
+    - Basic dark colorscheme
 --]]
 
 return {
@@ -15,10 +15,13 @@ return {
             style = "dark",
             transparent = true,
         })
-        -- Load
-        onedark.load()
 
-        -- Set colorscheme (redundant of load)
-        vim.cmd.colorscheme("onedark")
+        if vim.g.colors_name == "onedark" then
+            -- Load
+            onedark.load()
+
+            -- Set colorscheme (redundant of load)
+            vim.cmd.colorscheme("onedark")
+        end
     end,
 }
