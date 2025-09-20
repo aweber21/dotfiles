@@ -27,7 +27,9 @@
         },
         "bar": {
             "width": 10,
-            "charElapsed": "■",
+            "char": {
+                "elapsed": "■",
+            },
             "charTotal": "-"
         },
         "percent": {
