@@ -41,7 +41,7 @@
         "all-outputs": true,
         
         // Formatting
-        "format": "{name}",
+        "format": "{name}"
     },
     "hyprland/window": {
         // Module-Specific
@@ -155,7 +155,7 @@
         "menu-actions": {
             "suspend": "systemctl suspend",
             "shutdown": "shutdown",
-            "reboot": "reboot",
+            "reboot": "reboot"
         }
     }
 }

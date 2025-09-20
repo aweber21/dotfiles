@@ -28,7 +28,7 @@
         "bar": {
             "width": 10,
             "char": {
-                "elapsed": "■",
+                "elapsed": "■"
             },
             "charTotal": "-"
         },
@@ -69,7 +69,7 @@
         {
             "type": "display",
             "key": "Display",
-            "keyColor": "keys",
+            "keyColor": "keys"
         },
         {
             "type": "battery",
@@ -79,7 +79,7 @@
         {
             "type": "uptime",
             "key": "Uptime",
-            "keyColor": "keys",
+            "keyColor": "keys"
         },
         "break",
         {
@@ -92,39 +92,39 @@
         {
             "type": "gpu",
             "key": "GPU",
-            "keyColor": "keys",
+            "keyColor": "keys"
         },
         {
             "type": "memory",
             "key": "Memory",
-            "keyColor": "keys",
+            "keyColor": "keys"
         },
         {
             "type": "disk",
             "key": "Disk",
-            "keyColor": "keys",
+            "keyColor": "keys"
         },
         "break",
         {
             "type": "wm",
             "key": "Window Manager",
-            "keyColor": "keys",
+            "keyColor": "keys"
         },
         {
             "type": "terminal",
             "key": "Terminal",
-            "keyColor": "keys",
+            "keyColor": "keys"
         },
         {
             "type": "shell",
             "key": "Shell",
-            "keyColor": "keys",
+            "keyColor": "keys"
         },
         "break",
         {
             "type": "wifi",
             "key": "WiFi",
-            "keyColor": "keys",
+            "keyColor": "keys"
         },
         {
             "type": "localip",
@@ -135,13 +135,13 @@
         {
             "type": "publicip",
             "key": "Public IP",
-            "keyColor": "keys",
+            "keyColor": "keys"
         },
         "separator",
         {
             "type": "datetime",
             "key": "Date & Time",
-            "keyColor": "keys",
-        },
+            "keyColor": "keys"
+        }
     ]
 }
