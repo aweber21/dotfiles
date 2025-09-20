@@ -5,23 +5,23 @@
 configuration {
     //--- Modes ---//
     modes: "drun,run,ssh,window";
-    
+
     //--- Font ---//
     font: "JetBrainsMono Nerd Font 12";
     show-icons: true;
     // icon-theme: ;
     // application-fallback-icon: ;
-    
+
     //--- Layout ---//
     eh: 1;
     sidebar-mode: false;
     fixed-num-lines: true;
-    
+
     //--- Position ---///
     location: 0;
     yoffset: 0;
     xoffset: 0;
-    
+
     //--- Commands ---//
     terminal: "kitty";
     run-command: "{cmd}";
@@ -36,14 +36,14 @@ configuration {
     // on-menu-canceled: ;
     // on-menu-error: ;
     // on-screenshot-taken: ;
-    
+
     //--- Window Mode ---//
     display-window: "Window";
     window-command: "wmctrl -i -R {window}";
     window-match-fields: "all";
     window-format: "{w}    {c}   {t}";
     window-thumbnail: false;
-    
+
     //--- DRun Mode ---//
     display-drun: "DRun";
     drun-match-fields: "name,generic,exec,categories,keywords";
@@ -54,34 +54,34 @@ configuration {
     drun-url-launcher: "xdg-open";
     drun-use-desktop-cache: false;
     drun-reload-desktop-cache: false;
-    
+
     //--- Run Mode ---//
     display-run: "Run";
-    
+
     //--- SSH Mode ---//
     display-ssh: "SSH";
     parse-hosts: false;
     parse-known-hosts: true;
-    
+
     //--- Keys Mode ---//
     display-keys: "Keys";
-    
+
     //--- File Browser Mode ---//
     display-filebrowser: "File Browser";
     filebrowser {
         directories-first: true;
         sorting-method: "name";
     }
-    
+
     //--- Recursive Browser Mode ---//
     display-recursivebrowser: "Recursive Browser";
-    
+
     //--- Combi Mode ---//
     display-combi: "Combi";
     combi-modes: "window,run";
     combi-hide-mode-prefix: false;
     combi-display-format: "{mode} {text}";
-    
+
     //--- Filtering ---//
     matching: "normal";
     // filter: ;
@@ -91,11 +91,11 @@ configuration {
     matching-negate-char: '-' /* unsupported */;
     completer-mode: "filebrowser";
     tokenize: true;
-    
+
     //--- Sorting ---//
     sort: true;
     sorting-method: "normal";
-    
+
     //--- Usability ---//
     scroll-method: 1;
     cycle: true;
@@ -104,12 +104,12 @@ configuration {
     steal-focus: false;
     click-to-exit: true;
     global-kb: false;
-    
+
     //--- History ---//
     disable-history: false;
     ignored-prefixes: "";
     max-history-size: 25;
-    
+
     //--- Miscellaneous ---/
     pid: "/run/user/1000/rofi.pid";
     imdkit: true;
@@ -118,14 +118,14 @@ configuration {
     threads: 0;
     // cache-dir: ;
     xserver-i300-workaround: false;
-    
+
     //--- Timeout ---//
     refilter-timeout-limit: 300;
     timeout {
         action: "kb-cancel";
         delay: 0;
     }
-    
+
     //--- Keyboard ---//
     kb-primary-paste: "Control+V,Shift+Insert";
     kb-secondary-paste: "Control+v,Insert";
@@ -201,7 +201,7 @@ configuration {
     kb-entry-history-down: "Control+Down";
     kb-matcher-up: "Super+equal";
     kb-mather-down: "Super+minus";
-    
+
     //--- Mouse ---//
     ml-row-left: "ScrollLeft";
     ml-row-right: "ScrollRight";

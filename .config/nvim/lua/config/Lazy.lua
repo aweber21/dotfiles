@@ -56,7 +56,7 @@ require("lazy").setup({
     -- Autocompletion and Snippets
     -- LuaSnip, Cmp_LuaSnip, Friendly-Snippets, Cmp-Nvim-Lsp, Nvim-Cmp
     { import = "plugins/Completions" },
-    { import = "plugins/Autopairs"},
+    { import = "plugins/Autopairs" },
 
     -- Debugging
     -- Nvim-Dap-UI, Nvim-Dap, Nvim-Nio

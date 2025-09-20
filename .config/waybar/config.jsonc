@@ -18,7 +18,7 @@
     "passthrough": false,
     "ipc": false,
     "reload_style_on_change": false,
-    
+
     //--- Modules Configuration ---//
     "modules-left": [
         "hyprland/workspaces"
@@ -66,7 +66,7 @@
             "headset": "",
             "default": ["", "", ""]
         },
-        
+
         // Tooltip
         "tooltip": true,
         "tooltip-format": "{desc}",
@@ -78,13 +78,13 @@
     "network": {
         // Module-Specific
         "family": "ipv4",
-        
+
         // Formatting
         "format": "Finding",
         "format-wifi": "{frequency} GHz  ",
         "format-ethernet": "Wired ",
         "format-disconnected": "None 󰖪",
-        
+
         // Tooltip
         "tooltip": true,
         "tooltip-format": "{ifname}",
@@ -103,14 +103,14 @@
             "warning": 30,
             "critical": 15
         },
-        
+
         // Formatting
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
         "format-charging": "{capacity}% {icon}󱐋",
         "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
         "justify": "center",
-        
+
         // Actions
         "on-click-right": "kitty -e btop"
     },
@@ -119,10 +119,10 @@
         // "timezone": "Etc/UTC",
         // "timezone": "America/New_York",
         "timezone": "America/Chicago",
-        
+
         // Formatting
         "format": "{:%I:%M %p}", // 12 Hour Clock
-        
+
         // Tooltip
         "tooltip": true,
         "tooltip-format": "<tt><big>{calendar}</big></tt>",
@@ -145,10 +145,10 @@
     "custom/power": {
         // Formatting
         "format" : "  ",
-        
+
         // Tooltip
         "tooltip": false,
-        
+
         // Menu
         "menu": "on-click",
         "menu-file": "$HOME/.config/waybar/custom/power.xml",

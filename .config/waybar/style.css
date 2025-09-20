@@ -33,16 +33,16 @@ window#waybar {
 
     /* Content */
     /* See #workspaces label */
-    
+
     /* Padding */
     /* Top Right Bottom Left */
     padding: 0px 0px 0px 0px;
-    
+
     /* Border */
     border-color: transparent;
     border-width: 1px;
     border-style: solid;
-    
+
     /* Margin */
     /* Top Right Bottom Left */
     margin: 0px 4px 0px 4px;
@@ -59,21 +59,21 @@ window#waybar {
     background: inherit;
 
     /* Content */
-    
+
     /* Padding */
     /* Top Right Bottom Left */
     padding: 0px 4px 0px 4px;
-    
+
     /* Border */
     border-color: @wallpaperPrimary;
     border-width: 2px;
     border-style: solid;
     border-radius: 50%;
-    
+
     /* Margin */
     /* Top Right Bottom Left */
     margin: 0px 2px 0px 2px;
-    
+
     /* Transitions */
     transition-property: border-color;
     transition-duration: 0.3s;
@@ -85,21 +85,21 @@ window#waybar {
     background-color: @wallpaperSecondary;
 
     /* Content */
-    
+
     /* Padding */
     /* Top Right Bottom Left */
     padding: 0px 4px 0px 4px;
-    
+
     /* Border */
     border-color: @wallpaperPrimary;
     border-width: 2px;
     border-style: solid;
     border-radius: 50%;
-    
+
     /* Margin */
     /* Top Right Bottom Left */
     margin: 0px 2px 0px 2px;
-    
+
     /* Transitions */
     transition-property: border-color;
     transition-duration: 0.3s;
@@ -114,21 +114,21 @@ window#waybar {
     /* Padding */
     /* Top Right Bottom Left */
     padding: 0px 4px 0px 4px;
-    
+
     /* Border */
     border-color: @wallpaperSecondary;
     border-width: 2px;
     border-style: solid;
     border-radius: 50%;
-    
+
     /* Margin */
     /* Top Right Bottom Left */
     margin: 0px 2px 0px 2px;
-    
+
     /* Shadows */
     box-shadow: none;
     text-shadow: none;
-    
+
     /* Transitions */
     transition-property: border-color;
     transition-duration: 0.3s;
@@ -144,7 +144,7 @@ window#waybar {
 #idle_inhibitor {
     /* Background */
     background: transparent;
-    
+
     /* Content */
     color: @wallpaperPrimary;
 
@@ -152,13 +152,13 @@ window#waybar {
     /* Top Right Bottom Left */
     padding: 0px 7px 0px 0px;
     min-width: 25px;
-    
+
     /* Border */
     border-color: @wallpaperPrimary;
     border-width: 2px;
     border-style: solid;
     border-radius: 2px;
-    
+
     /* Margin */
     /* Top Right Bottom Left */
     margin: 0px 0px 0px 0px;
@@ -172,7 +172,7 @@ window#waybar {
 #idle_inhibitor.activated {
     /* Content */
     background-color: @wallpaperSecondary;
-    
+
     /* Padding */
     /* Top Right Bottom Left */
     padding: 0px 6.5px 0px 0.5px;
@@ -192,7 +192,7 @@ window#waybar {
 #pulseaudio {
     /* Background */
     background: transparent;
-    
+
     /* Content */
     color: @wallpaperPrimary;
 
@@ -200,13 +200,13 @@ window#waybar {
     /* Top Right Bottom Left */
     padding: 0px 10px 0px 5px;
     min-width: 80px;
-    
+
     /* Border */
     border-color: @wallpaperPrimary;
     border-width: 2px;
     border-style: solid;
     border-radius: 2px;
-    
+
     /* Margin */
     /* Top Right Bottom Left */
     margin: 0px 0px 0px 0px;
@@ -231,7 +231,7 @@ window#waybar {
 #network {
     /* Background */
     background: transparent;
-    
+
     /* Content */
     color: @wallpaperPrimary;
 
@@ -239,13 +239,13 @@ window#waybar {
     /* Top Right Bottom Left */
     padding: 0px 5px 0px 5px;
     min-width: 70px;
-    
+
     /* Border */
     border-color: @wallpaperPrimary;
     border-width: 2px;
     border-style: solid;
     border-radius: 2px;
-    
+
     /* Margin */
     /* Top Right Bottom Left */
     margin: 0px 0px 0px 0px;
@@ -279,7 +279,7 @@ window#waybar {
 #battery {
     /* Background */
     background: transparent;
-    
+
     /* Content */
     color: @wallpaperPrimary;
 
@@ -287,13 +287,13 @@ window#waybar {
     /* Top Right Bottom Left */
     padding: 0px 5px 0px 5px;
     min-width: 60px;
-    
+
     /* Border */
     border-color: @wallpaperPrimary;
     border-width: 2px;
     border-style: solid;
     border-radius: 2px;
-    
+
     /* Margin */
     /* Top Right Bottom Left */
     margin: 0px 0px 0px 0px;
@@ -336,7 +336,7 @@ window#waybar {
 #clock {
     /* Background */
     background: transparent;
-    
+
     /* Content */
     color: @wallpaperPrimary;
 
@@ -344,13 +344,13 @@ window#waybar {
     /* Top Right Bottom Left */
     padding: 0px 5px 0px 5px;
     min-width: 65px;
-    
+
     /* Border */
     border-color: @wallpaperPrimary;
     border-width: 2px;
     border-style: solid;
     border-radius: 2px;
-    
+
     /* Margin */
     /* Top Right Bottom Left */
     margin: 0px 0px 0px 0px;
@@ -375,20 +375,20 @@ window#waybar {
 #custom-power {
     /* Background */
     background: transparent;
-    
+
     /* Content */
     color: @wallpaperPrimary;
 
     /* Padding */
     /* Top Right Bottom Left */
     padding: 0px 3px 1px 0px;
-    
+
     /* Border */
     border-color: @wallpaperPrimary;
     border-width: 2px;
     border-style: solid;
     border-radius: 2px;
-    
+
     /* Margin */
     /* Top Right Bottom Left */
     margin: 0px 3px 0px 0px;
