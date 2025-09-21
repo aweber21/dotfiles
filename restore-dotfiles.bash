@@ -76,7 +76,7 @@ cp -r "$CONFIG_SOURCE"/rofi "$CONFIG_DESTINATION"
 cp -r "$CONFIG_SOURCE"/uwsm "$CONFIG_DESTINATION"
 
 # Vim
-mkdir "$CONFIG_DESTINATION"/vim
+mkdir -p "$CONFIG_DESTINATION"/vim
 cp "$CONFIG_SOURCE"/vim/vimrc "$CONFIG_DESTINATION"/vim
 
 # Waybar
