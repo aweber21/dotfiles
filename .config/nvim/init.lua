@@ -13,14 +13,19 @@ vim.cmd([[
 ]])
 
 --[[
-Neovim Overrides
+Options
 --]]
-vim.o.showmode = false
+require('config/Options')
+
+--[[
+Autocommands
+--]]
+require('config/Autocommands')
 
 --[[
 Keybinds
 --]]
-require("config/Keybinds")
+require('config/Keybinds')
 
 --[[
 Colorscheme
@@ -28,9 +33,15 @@ Colorscheme
       colorscheme lua file
     - Must be set before Lazy executes
 --]]
-vim.g.colors_name = "vscode"
+vim.g.colors_name = 'vscode'
 
 --[[
 Lazy
 --]]
-require("config/Lazy")
+require('config/Lazy')
+
+--[[
+Lsp
+    - Configure Lsps after Lazy executes so Mason can install if needed
+--]]
+require('config/Lsp')

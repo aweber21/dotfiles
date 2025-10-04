@@ -1,15 +1,15 @@
 --[[
-Autopairs
+Nvim-Autopairs
     - A tool to automatically insert pairs of brackets or quotes
 --]]
 
 return {
     {
-        "windwp/nvim-autopairs",
-        event = "InsertEnter",
+        'windwp/nvim-autopairs',
+        event = 'VeryLazy',
         config = function()
             -- Modules
-            local autopairs = require("nvim-autopairs")
+            local autopairs = require('nvim-autopairs')
 
             -- Setup
             autopairs.setup({})

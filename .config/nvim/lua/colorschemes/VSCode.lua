@@ -4,16 +4,16 @@ VSCode
 --]]
 
 return {
-    "Mofiqul/vscode.nvim",
+    'Mofiqul/vscode.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins
     config = function()
         -- Modules
-        local vscode = require("vscode")
-        local vscode_colors = require("vscode/colors").get_colors()
+        local vscode = require('vscode')
+        local vscode_colors = require('vscode/colors').get_colors()
 
         -- Setup
         vscode.setup({
-            style = "dark",
+            style = 'dark',
             transparent = true,
             italic_comments = true,
             italic_inlayhints = true,
@@ -37,12 +37,12 @@ return {
             },
         })
 
-        if vim.g.colors_name == "vscode" then
+        if vim.g.colors_name == 'vscode' then
             -- Load
             vscode.load()
 
             -- Set colorscheme (redundant of load)
-            vim.cmd.colorscheme("vscode")
+            vim.cmd.colorscheme('vscode')
         end
     end,
 }
