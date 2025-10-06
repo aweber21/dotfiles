@@ -1,0 +1,6 @@
+# JHU Git Configuration
+[user]
+	name = Andrew Weber
+	email = aweber32@jh.edu
+[core]
+	editor = vim

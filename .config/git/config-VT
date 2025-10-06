@@ -1,0 +1,6 @@
+# VT Git Configuration
+[user]
+	name = Andrew Weber
+	email = aweber21@vt.edu
+[core]
+	editor = vim

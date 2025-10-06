@@ -60,6 +60,9 @@ CONFIG_DESTINATION="$BACKUP_DESTINATION"/.config
 # Fastfetch
 cp -r "$CONFIG_SOURCE"/fastfetch "$CONFIG_DESTINATION"
 
+# Git
+cp -r "$CONFIG_SOURCE"/git "$CONFIG_DESTINATION"
+
 # Hypr Ecosystem
 cp -r "$CONFIG_SOURCE"/hypr "$CONFIG_DESTINATION"
 

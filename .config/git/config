@@ -1,0 +1,14 @@
+# Default Git Configuration
+[user]
+	name = Andrew Weber
+	email = andrew.h.weber@verizon.net
+[core]
+	editor = vim
+
+# VT Git Configuration
+[includeIf "gitdir:~/School/VT/"]
+    path = ~/.config/git/config-VT
+
+# JHU Git Configuration
+[includeIf "gitdir:~/School/JHU/"]
+    path = ~/.config/git/config-JHU
