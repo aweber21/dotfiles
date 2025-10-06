@@ -101,7 +101,8 @@ return {
             -- Setup
             mason_nvim_dap.setup({
                 ensure_installed = {
-                    'python', -- debugpy
+                    -- Python
+                    'debugpy',
                 },
                 -- Automatic Enable
                 handlers = {},
