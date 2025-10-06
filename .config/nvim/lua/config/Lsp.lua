@@ -36,26 +36,26 @@ vim.api.nvim_create_autocmd('LspAttach', {
             end, { desc = 'Code Actions' })
         end
 
-        -- Completion
-        if client:supports_method('textDocument/completion') then
-            vim.opt.completeopt = { 'menu', 'menuone', 'noinsert', 'fuzzy',
-                'popup' }
-            vim.lsp.completion.enable(true, client.id, ev.buf,
-                { autotrigger = true })
-
-            -- Manually open completion
-            vim.keymap.set('i', '<C-c>', vim.lsp.completion.get,
-                { desc = 'Manually open completion' })
-
-            -- Insert completion selection
-            vim.keymap.set('i', '<Tab>', function()
-                if vim.fn.pumvisible() == 1 then
-                    return '<C-y>'
-                else
-                    return '<Tab>'
-                end
-            end, { expr = true, silent = true })
-        end
+        -- Completion (Handled by Blink.cmp)
+        -- if client:supports_method('textDocument/completion') then
+        --     vim.opt.completeopt = { 'menu', 'menuone', 'noinsert', 'fuzzy',
+        --         'popup' }
+        --     vim.lsp.completion.enable(true, client.id, ev.buf,
+        --         { autotrigger = true })
+        --
+        --     -- Manually open completion
+        --     vim.keymap.set('i', '<C-c>', vim.lsp.completion.get,
+        --         { desc = 'Manually open completion' })
+        --
+        --     -- Insert completion selection
+        --     vim.keymap.set('i', '<Tab>', function()
+        --         if vim.fn.pumvisible() == 1 then
+        --             return '<C-y>'
+        --         else
+        --             return '<Tab>'
+        --         end
+        --     end, { expr = true, silent = true })
+        -- end
 
         -- Declaration
         if client:supports_method('textDocument/declaration') then
